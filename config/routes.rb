@@ -1,4 +1,8 @@
 Scoreboard::Application.routes.draw do
+  get "game_main/index"
+  
+  root :to => 'game_main#index'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
