@@ -1,10 +1,9 @@
 var guessesLeft = 10;
-var highScores = new Array([9, "HarryJamesPotter"], [3, "ZedCthulhu"], [2, "NearlyDied"]);
 var magicNumber = Math.floor((Math.random()*100)+1);
 
 $(function() {
   updateScore(guessesLeft);
-  populateHighScores(highScores);
+  
   $("h3#feedbackHigh").hide();
   $("h3#feedbackLow").hide();
   
@@ -22,10 +21,11 @@ $(function() {
 
 });
 
-function populateHighScores(scores) {
-  for (var i = 0; i < scores.length; ++i) {
-    $('div#highScores').append("<p>" + scores[i][0] + " " + scores[i][1] + "</p>");
-  }
+function populateHighScores() {
+	<% game_main.high_scores.each do |high_score| %>
+    	$('div#highScores').append("<p>" + <%= high_score.name %> 
+    					+ " " + <%= high_score.score %> + "</p>");
+    <% end %>
 }
 
 function updateScore(score) {
