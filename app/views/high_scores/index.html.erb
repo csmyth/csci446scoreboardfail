@@ -1,20 +1,5 @@
-<h1>Listing high_scores</h1>
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Score</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @high_scores.each do |high_score| %>
-  <tr>
-    <td><%= high_score.name %></td>
-    <td><%= high_score.score %></td>
-  </tr>
-<% end %>
-</table>
+<h2><span class="highScore">High</span> Scores</h2>
+<div id="highScores"></div>
 
 <br />
