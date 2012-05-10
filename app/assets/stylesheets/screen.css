@@ -15,12 +15,6 @@ h1 {
   margin-top: 0px;
 }
 
-h2 span.highScore {
-  color: #444;
-  font-size: 2em;
-  margin-right: -50px;
-}
-
 h2#score {
   color: #FFC125;
   margin: 0px;
